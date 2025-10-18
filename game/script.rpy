@@ -10,6 +10,8 @@ define m= Character("Man", color="#bf2626")
 
 label start:
 
+    default cat_character = "Pusheen"
+
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
@@ -70,9 +72,9 @@ label start:
     menu:
         "IM NOT GOING TO JAIL!!!!":
             m "YES YOU ARE!!!!"
-        "Ok, I guess I have to.":
+        "Ok, since I'm [cat_character] I guess I have to.":
             m "Yes, you do."
-        "Say nothing":
+        "RUN AWAY!!":
             jump RUN_AWAY
 
     scene black
@@ -89,11 +91,11 @@ label start:
 
     return
 
-label RUN_AWAY
+label RUN_AWAY:
     p "IM RUNNING LOSER!!"
     m "HEYY! STOP THAT"
 
 scene black
 with dissolve
 
-"Pusheen ran away!!"
+"Pusheen ran away from the IRS!"
