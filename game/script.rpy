@@ -96,4 +96,4 @@ label RUN_AWAY
 scene black
 with dissolve
 
-"Pusheen ran away!"
+"Pusheen ran away!!"
