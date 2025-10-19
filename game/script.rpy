@@ -4,7 +4,7 @@
 # name of the character.
 
 define p = Character(" [cat_character] ", color="#ebbce3")
-define m= Character("Man", color="#bf2626")
+define m= Character("Man", color="#1f569f")
 
 # The game starts here.
 
@@ -68,7 +68,7 @@ label start:
 
     p "You're the entire IRS??"
 
-    m "Don't question me."
+    m "{b}{i}Don't question me!{/i}{/b}"
 
     if Tax_paid == True:
         jump boring
