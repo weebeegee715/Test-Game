@@ -6,5 +6,5 @@ default my_list = [24, True, "Pusheen"]
 python:
     number = 25
     boolean = False
-    string = "Eileen"
-    my_list = [25, False "Eileen"]
+    string = "Pusheen"
+    my_list = [25, False, "Pusheen"]

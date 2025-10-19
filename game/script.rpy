@@ -3,7 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define p = Character("Pusheen", color="#ebbce3")
+define p = Character(" [cat_character] ", color="#ebbce3")
 define m= Character("Man", color="#bf2626")
 
 # The game starts here.
@@ -11,6 +11,8 @@ define m= Character("Man", color="#bf2626")
 label start:
 
     default cat_character = "Pusheen"
+
+    default Tax_paid = False
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
@@ -30,7 +32,16 @@ label start:
 
     p "isnt that cool?"
 
-    p "It's good to always try new things!"
+    p "Wait I need to pat my taxes!!!"
+
+    menu:
+        "nah.":
+            p "I don't got money like that..."
+        
+        "Ok let's do that":
+            p "Ok boom paid."
+            $ Tax_paid = True
+        
 
     show pusheen dance
 
@@ -59,6 +70,17 @@ label start:
 
     m "Don't question me."
 
+    if Tax_paid == True:
+        jump boring
+
+    elif Tax_paid == False:
+        pass
+
+    else:
+        pass
+
+
+
     p "I am NOT paying my taxes LOL!!!"
 
     m "Nahh ur going to jail..."
@@ -71,10 +93,14 @@ label start:
 
     menu:
         "IM NOT GOING TO JAIL!!!!":
+            $ cat_character = "Felon"
             m "YES YOU ARE!!!!"
-        "Ok, since I'm [cat_character] I guess I have to.":
+        
+        "Ok since im [cat_character] I guess I have to...":
             m "Yes, you do."
+        
         "RUN AWAY!!":
+            $ cat_character = "Runaway"
             jump RUN_AWAY
 
     scene black
@@ -84,9 +110,6 @@ label start:
 
     "They took pusheen to jail..."
 
-
-
-    
     # This ends the game.
 
     return
@@ -99,3 +122,17 @@ scene black
 with dissolve
 
 "Pusheen ran away from the IRS!"
+
+return
+
+label boring:
+    m "Wait..."
+    m "It seems you've already done your taxes."
+    m "Have a nice day."
+
+scene black
+with dissolve
+
+"Pusheen avoided the IRS!"
+
+return
