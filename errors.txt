@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 76: expected python_expression
-    elif:
-        ^
+File "game/script.rpy", line 58: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    p "Isnt it weird that we're floating??"
+    ^
 
 Ren'Py Version: Ren'Py 8.4.1.25072401
-Sat Oct 18 20:27:05 2025
+Sat Oct 18 21:53:30 2025

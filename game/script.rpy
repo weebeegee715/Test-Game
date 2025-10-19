@@ -14,11 +14,19 @@ label start:
 
     default Tax_paid = False
 
+    $ cat_character = renpy.input("Who is this cat?", default='Pusheen')
+
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
+    play music "audio/wallpaper.mp3" fadein 0.5
+
+    pause 0.9 
+
     scene bg sky
+    with dissolve
+
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -32,7 +40,7 @@ label start:
 
     p "isnt that cool?"
 
-    p "Wait I need to pat my taxes!!!"
+    p "Wait I need to pay my taxes!!!"
 
     menu:
         "nah.":
@@ -51,7 +59,51 @@ label start:
 
     p "At this rate, i'll be done in no time."
 
+    $ topics = ["weather", "meaning of life", "Cat"]
+
+    p "What lovely [topics[0]] we're having..."
+    
+label conversation_topics:
+
+    menu:
+        "The weather" if "weather" in topics:
+
+            $ topics.remove("weather")
+
+            p "The weather is so great, especially since we're in the sky."
+            jump conversation_topics
+
+        "Meaning of life" if "meaning of life" in topics:
+
+            $ topics.remove("meaning of life")
+
+            p "Its 42. Isn't that obivious?"
+
+            $ topics.append("What do you mean 42?")
+
+            jump conversation_topics
+
+
+        "Being an intelligent cat" if "Cat" in topics:
+
+            $ topics.remove("Cat")
+        
+            p "I'm actually not. I'm a regular cat."
+            jump conversation_topics
+        
+        "What do you mean 42?" if "What do you mean 42?" in topics:
+
+            $ topics.remove("What do you mean 42?")
+            
+            p "It's everything. Duh."
+
+            jump conversation_topics
+
+
+
     p "Isnt it weird that we're floating??"
+
+
 
     scene bg flower
     with dissolve
@@ -64,7 +116,7 @@ label start:
     show man at left
     with moveinleft
 
-    m "Hello pusheen I am the IRS"
+    m "Hello [cat_character] I am the IRS"
 
     p "You're the entire IRS??"
 
@@ -90,25 +142,23 @@ label start:
     p "YOU CAN'T TAKE ME IM A SOVERIGN CITIZEN!!"
 
     m "Sure you are. Let's go."
-
+ 
     menu:
         "IM NOT GOING TO JAIL!!!!":
-            $ cat_character = "Felon"
             m "YES YOU ARE!!!!"
         
         "Ok since im [cat_character] I guess I have to...":
             m "Yes, you do."
         
         "RUN AWAY!!":
-            $ cat_character = "Runaway"
             jump RUN_AWAY
 
     scene black
     with dissolve
-
+    
     p "NOOO!!"
 
-    "They took pusheen to jail..."
+    "They took [cat_character] to jail..."
 
     # This ends the game.
 
@@ -121,7 +171,7 @@ label RUN_AWAY:
 scene black
 with dissolve
 
-"Pusheen ran away from the IRS!"
+"[cat_character] ran away from the IRS!"
 
 return
 
@@ -133,6 +183,6 @@ label boring:
 scene black
 with dissolve
 
-"Pusheen avoided the IRS!"
+"[cat_character] avoided the IRS!"
 
 return
