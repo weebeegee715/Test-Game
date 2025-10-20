@@ -14,7 +14,7 @@ label start:
 
     default Tax_paid = False
 
-    $ cat_character = renpy.input("Who is this cat?", default='Pusheen')
+    $ cat_character = renpy.input("Who is this cat?", default='Pusheen', length='15')
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
