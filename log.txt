@@ -1,18 +1,17 @@
-2025-10-19 21:50:21 UTC
+2025-10-21 16:24:54 UTC
 macOS-15.6-arm64-arm-64bit
 Ren'Py 8.4.1.25072401
 
-Early init took 19 ms
-Loading error handling took 11 ms
-Loading script took 55 ms
-Loading save slot metadata took 9 ms
+Early init took 17 ms
+Loading error handling took 10 ms
+Loading script took 39 ms
+Loading save slot metadata took 8 ms
 Loading persistent took 0 ms
-Running init code took 17 ms
+Running init code took 18 ms
 Loading analysis data took 1 ms
 Analyze and compile ATL took 0 ms
-Reloading save slot metadata took 2 ms
-Backing up script files to '/Users/ariellejoseph/Library/RenPy/backups/PusheenTestGame':
-Dump and make backups took 14 ms
+Reloading save slot metadata took 4 ms
+Dump and make backups took 13 ms
 Cleaning cache took 0 ms
 Making clean stores took 0 ms
 Initial gc took 12 ms
@@ -20,13 +19,13 @@ DPI scale factor: 1.000000
 Creating interface object took 0 ms
 Init translation took 0 ms
 Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 3 ms
-Save screen analysis took 4 ms
+Load screen analysis took 6 ms
+Analyze screens took 0 ms
+Save screen analysis took 0 ms
 Save pyanalysis took 0 ms
-Save bytecode took 11 ms
+Save bytecode took 0 ms
 Running _start took 0 ms
-Interface start took 190 ms
+Interface start took 262 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1470, 956)
@@ -39,6 +38,6 @@ Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 25
 Screen sizes: virtual=(1920, 1080) physical=(1248, 702) drawable=(2496, 1404)
 Maximum texture size: 4096x4096
 Cleaning stores took 0 ms
-Load screen analysis took 13 ms
+Load screen analysis took 15 ms
 Analyze screens took 0 ms
 Running _start took 1 ms
